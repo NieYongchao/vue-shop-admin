@@ -35,8 +35,8 @@ export default {
     return {
       // 表单对象
       loginForm: {
-        username: '',
-        password: ''
+        username: 'admin',
+        password: '123456'
       },
       // 表单验证规则
       loginFormRules: {
@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import url("//at.alicdn.com/t/font_2029874_wof8pg4cdmd.css");
+@import url("//at.alicdn.com/t/font_2029874_fvybloprp3s.css");
 .login_container {
   background-color: #2b4b6b;
   height: 100%;

@@ -7,3 +7,16 @@ html, body, #app {
   margin: 0px;
   padding: 0px;
 }
+
+.el-breadcrumb {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.el-table {
+  margin-top: 20px;
+}
+
+.el-pagination {
+  margin-top: 20px;
+}
