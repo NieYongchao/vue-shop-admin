@@ -13,10 +13,14 @@ html, body, #app {
   margin-bottom: 15px;
 }
 
-.el-table {
+.el-table, .zk-table {
   margin-top: 20px;
 }
 
 .el-pagination {
   margin-top: 20px;
+}
+
+.el-cascader-panel {
+  height: 350px !important;
 }

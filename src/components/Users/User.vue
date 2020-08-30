@@ -32,6 +32,9 @@
       </el-row>
       <el-table :data="userList" style="width: 100%" stripe border>
         <el-table-column type="index" label="#">
+          <template slot-scope="scope">
+            <span>{{(queryInfo.pagenum-1)*queryInfo.pagesize+scope.$index+1}}</span>
+          </template>
         </el-table-column>
         <el-table-column prop="username" label="姓名"> </el-table-column>
         <el-table-column prop="email" label="邮箱"> </el-table-column>
