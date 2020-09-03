@@ -20,7 +20,15 @@ html, body, #app {
 .el-pagination {
   margin-top: 20px;
 }
-
+/* 级联选择器 */
 .el-cascader-panel {
   height: 350px !important;
+}
+/* 步骤条 */
+.el-steps {
+  margin: 15px 0;
+}
+/* 富文本编辑器内容区域 */
+.ql-container {
+  height: 249px;
 }
