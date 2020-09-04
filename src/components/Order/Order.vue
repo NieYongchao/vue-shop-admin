@@ -191,7 +191,7 @@ export default {
         return this.$Message.error('获取订单列表失败！')
       }
       this.orderList = res.data.goods
-      console.log(this.orderList)
+      // console.log(this.orderList)
       this.total = res.data.total
     },
     // 监听分页size改变
@@ -220,7 +220,7 @@ export default {
         return this.$Message.error('获取物流信息失败！')
       }
       this.progressInfo = res.data
-      console.log(this.progressInfo)
+      // console.log(this.progressInfo)
       this.progressDialogVisible = true
     }
   }

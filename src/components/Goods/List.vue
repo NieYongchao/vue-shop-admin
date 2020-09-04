@@ -147,7 +147,7 @@ export default {
     },
     // 前往添加商品页面
     goGoodsAdd() {
-      console.log(this.$router.push('/goods/add'))
+      this.$router.push('/goods/add')
     }
   }
 }

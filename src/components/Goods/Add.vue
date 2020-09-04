@@ -199,7 +199,7 @@ export default {
       if (this.addForm.goods_cat.length !== 3) {
         this.addForm.goods_cat = []
       }
-      console.log(this.addForm.goods_cat)
+      // console.log(this.addForm.goods_cat)
     },
     // 标签页切换时的钩子函数
     beforeLeave(activeName, oldActiveName) {
@@ -237,7 +237,7 @@ export default {
           return this.$Message.error('获取静态属性列表失败！')
         }
         this.onlyTableData = res.data
-        console.log(this.onlyTableData)
+        // console.log(this.onlyTableData)
       }
     },
     // 图片预览
@@ -267,7 +267,7 @@ export default {
         // 处理数据
         const newForm = JSON.parse(JSON.stringify(this.addForm))
         newForm.goods_cat = newForm.goods_cat.join(',')
-        console.log(newForm)
+        // console.log(newForm)
         // 处理动态参数
         this.manyTableData.forEach(item => {
           const attrInfo = {
@@ -286,9 +286,9 @@ export default {
         })
         // newForm.attrs = this.addForm.attrs
         // console.log(this.addForm, '===')
-        console.log(newForm, '---')
+        // console.log(newForm, '---')
         const { data: res } = await this.$http.post('goods', newForm)
-        console.log(res)
+        // console.log(res)
         if (res.meta.status === 400) {
           return this.$Message.error('商品已存在！')
         } else if (res.meta.status === 201) {

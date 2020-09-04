@@ -239,7 +239,7 @@ export default {
     addCate() {
       this.$refs.addRuleFormRef.validate(async valid => {
         if (valid) {
-          console.log(this.addForm, 'sad')
+          // console.log(this.addForm, 'sad')
           const { data: res } = await this.$http.post(
             'categories',
             this.addForm
@@ -263,7 +263,7 @@ export default {
     // 显示编辑窗口
     showEditDialog(row) {
       this.editForm = row
-      console.log(row)
+      // console.log(row)
       this.editDialogVisible = true
     },
     // 关闭编辑窗口
@@ -273,9 +273,9 @@ export default {
     //  提交编辑信息
     editCateName() {
       this.$refs.editFormRef.validate(async valid => {
-        console.log(valid)
+        // console.log(valid)
         if (valid) {
-          console.log(valid)
+          // console.log(valid)
           const { data: res } = await this.$http.put('categories/' + this.editForm.cat_id, {
             cat_name: this.editForm.cat_name
           })

@@ -8,6 +8,10 @@ import ZkTable from 'vue-table-with-tree-grid'
 // 全局样式
 import './assets/css/global.css'
 
+// 引入（发起请求时）进度条
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 // 引入富文本编辑器
 import VueQuillEditor from 'vue-quill-editor'
 // 引入富文本编辑器样式
@@ -19,7 +23,14 @@ import axios from 'axios'
 // axios.defaults.baseURL = 'http://47.115.124.102:8888/api/private/v1/'
 axios.defaults.baseURL = 'https://rambuild.cn/api/private/v1'
 axios.interceptors.request.use(config => {
+  /* 发起请求时启动进度条 */
+  NProgress.start()
   config.headers.Authorization = window.sessionStorage.getItem('token')
+  return config
+})
+// 响应拦截中取消进度条
+axios.interceptors.response.use(config => {
+  NProgress.done()
   return config
 })
 Vue.prototype.$http = axios

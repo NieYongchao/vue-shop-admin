@@ -278,7 +278,7 @@ export default {
           if (res.meta.status !== 200) {
             return this.$Message.error('编辑角色数据失败!')
           }
-          console.log(res)
+          // console.log(res)
           this.$Message.success('修改角色数据成功!')
           this.editDialogVisible = false
         }
@@ -314,7 +314,7 @@ export default {
       this.roleId = role.id
       // 获取展示默认显示的权限
       this.getLeafKeys(role, this.defKeys)
-      console.log(this.defKeys)
+      // console.log(this.defKeys)
       this.setDialogVisible = true
     },
     // 递归保存对应角色的三级权限

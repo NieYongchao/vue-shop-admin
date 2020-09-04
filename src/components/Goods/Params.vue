@@ -300,7 +300,7 @@ export default {
       if (res.meta.status !== 200) {
         return this.$Message.error('获取分类参数失败！')
       }
-      console.log(res.data)
+      // console.log(res.data)
       // 把展开行所需要的数据改变为数组
       res.data.forEach(item => {
         item.attr_vals = item.attr_vals ? item.attr_vals.split(' ') : []
